@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318163315) do
+ActiveRecord::Schema.define(version: 20180318200413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "integer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180318163315) do
     t.integer "price_in_cents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -31,6 +38,11 @@ ActiveRecord::Schema.define(version: 20180318163315) do
     t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 
+  create_table "sellers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -38,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180318163315) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.integer "role"
   end
 
   add_foreign_key "reviews", "products"

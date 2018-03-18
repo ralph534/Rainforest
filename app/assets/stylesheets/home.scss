@@ -33,6 +33,35 @@ body {
   background: #ffffe0;
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#search {
+  text-align: center;
+  margin: 0 auto;
+  top: 5rem;
+}
+
+#search-field {
+  width: 15rem;
+  height: 2rem;
+}
+
+#search-submit {
+  height: 2rem;
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 .login-wrap {
   position: absolute;
   display: none;

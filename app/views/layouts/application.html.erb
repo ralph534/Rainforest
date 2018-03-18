@@ -26,6 +26,13 @@
       <% flash.each do |message_type, message| %>
         <div class="flash"><%= message %></div>
       <% end %>
+      <div id="search">
+        <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Products", :id => "search-field" %>
+          <%= submit_tag "Search", :name => nil %>
+        <% end %>
+      </div>
+      <%= render 'shared/top_nav' %>
       <% if logged_in? %>
         <div class="logged-in-user">
           <%= @current_user.name %>, <%= @current_user.email %>

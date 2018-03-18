@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // $('.login-form-wrap > div').empty('');
           })
         }
-      });
+    });
   });
 });

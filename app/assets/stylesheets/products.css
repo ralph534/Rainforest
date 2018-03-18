@@ -2,3 +2,37 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+.query-wrapper {
+  color: white;
+}
+
+#item {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.price {
+  color: darkgreen;
+}
+
+.msrp {
+  text-decoration: line-through;
+}
+
+#item:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+.products-wrapper {
+  display: grid;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.id {
+  visibility: hidden;
+}

@@ -4,14 +4,16 @@
 
 .wrapper {
   position: relative;
-  width: 40%;
-  height: auto;
+  width: 50rem;
+  border: 2px solid black;
   margin: 0 auto;
   z-index: 9999;
+  background: white;
 }
 
 .log-in {
   margin: 0 auto;
+  height: 2rem;
 }
 
 .log-in input {
