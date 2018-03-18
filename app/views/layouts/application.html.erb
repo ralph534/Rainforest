@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rainforest.com: Online Shopping | <%=yield(:title) %></title>
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>  
+
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="login-wrap">
+      <div class="login-form-wrap">
+        <%= image_tag "x.svg", :id => "x" %>
+        <div class="login-field">
+        </div>
+      </div>
+    </div>
+    <div class="main-wrapper">
+      <% flash.each do |message_type, message| %>
+        <div class="flash"><%= message %></div>
+      <% end %>
+      <% if logged_in? %>
+        <div class="logged-in-user">
+          <%= @current_user.name %>, <%= @current_user.email %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

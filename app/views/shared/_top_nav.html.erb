@@ -1,0 +1,42 @@
+<nav>
+  <ul>
+    <span class="link-wrap">
+      <li><%= link_to 'Register', signup_path %></li>
+    </span>
+    <span class="link-wrap">
+      <% if !logged_in? %>
+        <li><%= link_to 'Log In', login_path, id: 'log-in' %></li>
+      <% else %>
+        <li><%= link_to 'Log Out', logout_path %></li>
+      <% end %>
+    </span>
+    <span class="link-wrap">
+      <li>Your Cart</li>
+      <span id="shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+      </span>
+    </span>
+    <% if logged_in? %>
+      <span class="link-wrap">
+         <li><%= link_to 'My Account' %></li>
+      </span>
+    <% end %>
+  </ul>
+  <ul>
+    <span class="link-wrap">
+      <li>Books</li>
+    </span>
+    <span class="link-wrap">
+      <li>Movies</li>
+    </span>
+    <span class="link-wrap">
+     <li>Small Appliances</li>
+    </span>
+    <span class="link-wrap">
+     <li>Furniture</li>
+    </span>
+    <span class="link-wrap">
+     <li>Apparel</li>
+    </span>
+  </ul>
+</nav>

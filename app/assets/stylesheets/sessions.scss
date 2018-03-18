@@ -1,0 +1,35 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  position: relative;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  z-index: 9999;
+}
+
+.log-in {
+  margin: 0 auto;
+}
+
+.log-in input {
+  width: 100%;
+}
+
+.login-field input {
+  width: 100%
+}
+
+.btn {
+  margin-top: 1rem;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}

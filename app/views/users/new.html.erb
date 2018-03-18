@@ -1,0 +1,36 @@
+<% provide(:title, 'Sign Up') %>
+<%= render 'shared/header' %>
+<%= render 'shared/top_nav' %>
+
+<div class="section-header">
+  <div class="float-left">
+    <h1>Sign Up</h1>
+  </div>
+</div>
+
+<div class="signup-area">
+    <div class='signup-form'>
+    <%= form_for(@user, url: signup_path) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+
+      <%= f.label :password, 'Password (minimum 6 characters)' %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, 'Confirmation' %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit 'Create my account', class: 'btn' %>
+    </div>
+
+    <div id="error_messages">
+      <%= render 'shared/error_messages' %>
+    </div>
+    <% end %>
+</div>
+
+
